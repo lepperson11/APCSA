@@ -1,0 +1,80 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  -
+
+import javax.swing.JFrame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Graphics;
+import java.awt.Color;
+import java.awt.Canvas;
+
+class GraphicsRunner extends JFrame
+{
+	private static final int WIDTH = 800;
+	private static final int HEIGHT = 600;
+
+	public GraphicsRunner()
+	{
+		super("MAKE YOUR OWN SHAPE");
+
+		setSize(WIDTH,HEIGHT);
+
+		getContentPane().add(new ShapePanel());
+
+		setVisible(true);
+	}
+
+	public static void main( String args[] )
+	{
+		GraphicsRunner run = new GraphicsRunner();
+	}
+
+	class Robot extends Canvas
+	{
+	   public Robot()    //constructor method - sets up the class
+	   {
+	      setSize(800,600);
+	      setBackground(Color.WHITE);   	
+	      setVisible(true);
+	   }
+
+	   public void paint( Graphics window )
+	   {
+	      window.setColor(Color.BLUE);
+
+	      window.drawString("Robot LAB ", 35, 35 );
+
+	      //call head method
+	      
+	      //call other methods
+	      
+	   }
+
+	   public void head( Graphics window )
+	   {
+	      window.setColor(Color.YELLOW);
+
+	      window.fillOval(300, 100, 200, 100);
+
+
+			//add more code here
+					
+	   }
+
+	   public void upperBody( Graphics window )
+	   {
+
+			//add more code here
+	   }
+
+	   public void lowerBody( Graphics window )
+	   {
+
+			//add more code here
+
+	   }
+	}
+}
