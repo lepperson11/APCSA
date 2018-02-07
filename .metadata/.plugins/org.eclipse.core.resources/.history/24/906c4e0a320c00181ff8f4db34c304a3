@@ -6,11 +6,11 @@
 
 public class Line
 {
-	private double xOne,yOne, xTwo, yTwo;
+	private int xOne,yOne, xTwo, yTwo;
 	private double slope;
 	String cord1, cord2;
 	
-	public Line(double x1, double y1, double x2, double y2)
+	public Line(int x1, int y1, int x2, int y2)
 	{
 
 		xOne = x1;
@@ -34,7 +34,7 @@ public class Line
 
 	public void calculateSlope( )
 	{
-		slope = (yTwo - yOne)/(xTwo - xOne);
+		slope = (yTwo - yOne) % (xTwo - xOne);
 
 	}
 

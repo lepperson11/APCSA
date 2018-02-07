@@ -10,7 +10,7 @@ public class Lab02f
    {
 		//add test cases
 		Line slopetest = new Line(1,9,14,2);
-		slopetest.setCoordinates();
+		slopetest.setCoordinates(1,9,14,2);
 		slopetest.calculateSlope();
 		slopetest.print();
 		
