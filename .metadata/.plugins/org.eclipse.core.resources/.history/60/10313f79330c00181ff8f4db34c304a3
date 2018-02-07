@@ -24,6 +24,6 @@ public class Fahrenheit
 	public void print()
 	{
 		//this is part of the solution
-		System.out.println("The temperature is " + getCelsius());
+		System.out.println("The temperature is "getCelsius());
 	}
 }
