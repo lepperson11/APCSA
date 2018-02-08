@@ -31,14 +31,12 @@ public class Quadratic
 	public void calcRoots()
 	{
 		rootOne = (-b + sqrt(Math.pow(b,2) - 4 * a * c)) / (2 * a);
-		rootTwo = (-b - sqrt(Math.pow(b,2) - 4 * a * c)) / (2 * a);
 
 	}
 
 	public void print( )
 	{
 		System.out.println("rootone :" + rootOne);
-		System.out.println("roottwo :" + rootTwo);
 
 	}
 }
