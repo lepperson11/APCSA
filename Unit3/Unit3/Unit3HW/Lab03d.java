@@ -4,9 +4,8 @@
 //Class -
 //Lab  -
 
-import java.util.Scanner;
-import static java.lang.System.*;
-import static java.lang.Math.*;
+
+
 
 public class Lab03d
 {
