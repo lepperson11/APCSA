@@ -19,13 +19,12 @@ public class Name
 
 	public void getFirst()
 	{
-		int test = name.indexOf(" ");
-		first = name.substring(0, test);
+		first = name.substring (name.lastIndexOf (' '), name.length());
 	}
 
 	public void getLast()
 	{
-		second = name.substring (name.lastIndexOf (' '), name.length());
+		second = name.substring(name.length() - 1, name.length());
 	}
 
  	public void print()

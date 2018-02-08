@@ -12,7 +12,7 @@ public class Lab04d
 	{
 		Name person = new Name();
 		
-		person.setName("Sally Baker");
+		person.setName("John Doe");
 		person.getFirst();
 		person.getLast();
 		person.print();

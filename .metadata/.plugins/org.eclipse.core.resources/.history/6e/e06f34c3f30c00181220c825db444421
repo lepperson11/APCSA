@@ -10,7 +10,8 @@ import java.util.regex.Pattern;
 
 public class Name
 {
-	String name, first, second;
+	String name;
+	String[] first, second;
 	
    public void setName(String s)
    {
@@ -19,19 +20,17 @@ public class Name
 
 	public void getFirst()
 	{
-		int test = name.indexOf(" ");
-		first = name.substring(0, test);
+		String[] test1 = name.split(" ");
+		first = test1;
 	}
 
 	public void getLast()
 	{
-		second = name.substring (name.lastIndexOf (' '), name.length());
 	}
 
  	public void print()
  	{
  		System.out.println(first);
- 		System.out.println(second);
  		System.out.println(name);
 
 	}
