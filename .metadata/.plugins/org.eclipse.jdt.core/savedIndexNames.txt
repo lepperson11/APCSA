@@ -19,4 +19,3 @@ INDEX VERSION 1.130+C:\Users\eppersonl1493\Desktop\APCSA\.metadata\.plugins\org.
 3004396368.index
 3004383119.index
 2775202610.index
-3209030078.index

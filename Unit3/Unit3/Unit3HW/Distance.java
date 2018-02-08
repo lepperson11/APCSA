@@ -5,46 +5,45 @@
 //Lab  -
 
 import java.util.Scanner;
+
 import static java.lang.System.*;
 import static java.lang.Math.*;
 
 public class Distance
 {
-	private int xOne,yOne,xTwo,yTwo;
-	private double distance;
+	double xOne,yOne,xTwo,yTwo;
+	double distance;
+	Scanner keyboard = new Scanner(System.in);
 
-	public Distance()
+
+	public void setCoordinates()
 	{
 
+		System.out.println("Enter xOne:");
+		xOne = keyboard.nextDouble();
 
-
-	}
-
-	public Distance(int x1, int y1, int x2, int y2)
-	{
-
-
-
-	}
-
-	public void setCoordinates(int x1, int y1, int x2, int y2)
-	{
-
-
+		System.out.println("Enter yOne:");
+		yOne = keyboard.nextDouble();
+		
+		System.out.println("Enter xTwo:");
+		xTwo = keyboard.nextDouble();
+		
+		System.out.println("Enter yTwo:");
+		yTwo = keyboard.nextDouble();
 
 	}
 
 	public void calcDistance()
 	{
 
-
+		distance = sqrt(Math.pow((xTwo - xOne),2) + Math.pow((yTwo - yOne),2));
 
 	}
 
 	public void print( )
 	{
 
-
+		System.out.println("The distance is :" + distance);
 
 	}
 }
