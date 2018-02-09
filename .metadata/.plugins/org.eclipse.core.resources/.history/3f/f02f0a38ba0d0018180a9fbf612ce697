@@ -1,0 +1,39 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  -
+
+import static java.lang.System.*;
+
+public class StringChecker
+{
+	private String word;
+
+   public void setString(String s)
+   {
+   	word=s;
+   }
+
+	public boolean findLetter(char c)
+	{
+		int test = word.indexOf(c);
+		if (test > 0) System.out.println("True");
+
+
+		return false;
+	}
+
+	public boolean findSubString(String s)
+	{
+
+
+
+		return false;
+	}
+
+ 	public String toString()
+ 	{
+ 		return "\n\n";
+	}
+}

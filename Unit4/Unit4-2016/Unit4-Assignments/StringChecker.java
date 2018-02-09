@@ -8,19 +8,7 @@ import static java.lang.System.*;
 
 public class StringChecker
 {
-	private String word;
-
-	public StringChecker()
-	{
-
-
-	}
-
-	public StringChecker(String s)
-	{
-
-
-	}
+	String word;
 
    public void setString(String s)
    {
@@ -29,22 +17,30 @@ public class StringChecker
 
 	public boolean findLetter(char c)
 	{
-
-
-
-		return false;
+		if(word.indexOf(c)!=-1)
+		{
+		   return true;
+		}
+		else
+		{
+		   return false;
+		}
 	}
 
 	public boolean findSubString(String s)
 	{
-
-
-
-		return false;
+		if(word.indexOf(s)!=-1)
+		{
+		   return true;
+		}
+		else
+		{
+		   return false;
+		}
 	}
 
- 	public String toString()
+ 	public void print()
  	{
- 		return "\n\n";
+ 		 System.out.println(word);
 	}
 }
