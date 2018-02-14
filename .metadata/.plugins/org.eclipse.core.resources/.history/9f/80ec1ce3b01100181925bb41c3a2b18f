@@ -41,8 +41,7 @@ public class CharacterAnalyzer
 	
 	public void isNumber( )
 	{
-		
-		if (theChar>='0' && theChar<= '9')
+		if (theChar>='0' || theChar<= '1')
 		{
 			number = "It is a number.";
 			ascii = theChar;

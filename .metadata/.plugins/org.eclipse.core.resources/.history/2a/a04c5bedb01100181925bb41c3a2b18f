@@ -11,7 +11,7 @@ public class CharacterAnalyzer
 {
 	private char theChar;
 	private String upper, lower, number;
-	int ascii;
+	int ascii,num;
 
 	public CharacterAnalyzer(char c)
 	{
@@ -41,8 +41,8 @@ public class CharacterAnalyzer
 	
 	public void isNumber( )
 	{
-		
-		if (theChar>='0' && theChar<= '9')
+		num = theChar;
+		if (num>='0' || num<= '1')
 		{
 			number = "It is a number.";
 			ascii = theChar;
