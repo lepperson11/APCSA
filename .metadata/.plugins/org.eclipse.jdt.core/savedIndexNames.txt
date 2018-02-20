@@ -4,7 +4,6 @@ INDEX VERSION 1.130+C:\Users\eppersonl1493\Desktop\APCSA\.metadata\.plugins\org.
 1217923329.index
 3867579341.index
 1106408436.index
-1940527558.index
 3544518797.index
 3184717171.index
 2330857962.index

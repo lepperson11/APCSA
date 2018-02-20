@@ -8,37 +8,21 @@ import static java.lang.System.*;
 
 public class LetterRemover
 {
-   private String sentence;
-   private char lookFor;
+   private String sentence, lookFor, sentence2;
 
-	public LetterRemover()
-	{
-		//call set
-	}
-
-	//add in second constructor
-	
-	
-	
-	public void setRemover(String s, char rem)
+   public void setRemover(String s, String rem)
 	{
 		sentence = s;
 		lookFor = rem;
 	}
 
-	public String removeLetters()
+	public void removeLetters()
 	{
-		String cleaned=sentence;
-
-
-
-
-
-		return cleaned;
+		sentence2 = sentence.replace(lookFor,"");
 	}
 
 	public String toString()
 	{
-		return sentence + " - letter to remove " + lookFor;
+		return sentence + " - letter to remove " + lookFor + "   " + sentence2;
 	}
 }
