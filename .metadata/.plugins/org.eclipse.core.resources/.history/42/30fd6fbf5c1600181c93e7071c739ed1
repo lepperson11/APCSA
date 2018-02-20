@@ -12,10 +12,8 @@ public class Lab08i
 	public static void main ( String[] args )
 	{
 		//add test cases
-		Prime test = new Prime();
-		test.setPrime(13);
-		test.isPrime();
-		System.out.println(test.toString());
+		
+		
 		
 		
 		

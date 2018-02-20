@@ -13,7 +13,7 @@ public class Lab08i
 	{
 		//add test cases
 		Prime test = new Prime();
-		test.setPrime(13);
+		test.setPrime(24);
 		test.isPrime();
 		System.out.println(test.toString());
 		

@@ -11,35 +11,46 @@ public class Prime
 {
 	private int number;
 
+	public Prime()
+	{
+
+
+	}
+
+	public Prime(int num)
+	{
+
+
+	}
+
 	public void setPrime(int num)
 	{
-		number = num;
+
 
 	}
 
 	public boolean isPrime()
 	{
-		if (number % 2 != 0 && number % 3 != 0)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+
+
+
+
+
+
+
+		return true;
 	}
 
 	public String toString()
 	{
-		String output;
-		if (isPrime() == true)
-		{
-			output = number + " is a prime number";
-		}
-		else
-		{
-			output = number + " is not a prime number";
-		}
+		String output="";
+
+
+
+
+
+
+
 		return output;
 	}
 }

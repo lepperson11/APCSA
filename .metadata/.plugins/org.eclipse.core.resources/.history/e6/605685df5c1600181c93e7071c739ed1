@@ -31,15 +31,20 @@ public class Prime
 
 	public String toString()
 	{
-		String output;
 		if (isPrime() == true)
 		{
-			output = number + " is a prime number";
+			String output=number + "is a prime number";
 		}
 		else
 		{
-			output = number + " is not a prime number";
+			String output = number + "is not a prime number";
 		}
+
+
+
+
+
+
 		return output;
 	}
 }
