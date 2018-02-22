@@ -20,7 +20,7 @@ public class GuessingGame
 
 	}
 
-	public void playGame()
+	public boolean playGame()
 	{
 		Random rand = new Random();
 		guess = 0;
@@ -29,9 +29,18 @@ public class GuessingGame
 		while (guess != randomnumber)
 		{
 			System.out.println("Pick a number between 1 and " + upperbound);
-			guess = keyboard.nextInt();
+			int guess = keyboard.nextInt();
 			guesscount++;
+			if (guess == randomnumber)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
+		return true;
 
 
 
@@ -39,7 +48,7 @@ public class GuessingGame
 
 	public String toString()
 	{
-		String output="It took you " + guesscount + " guesses to guess " + randomnumber + "\n" + "You guessed wrong " + (100-(100/guesscount)) + " percent of the time.";
+		String output="It took you " + guesscount + " guesses to guess " + randomnumber + "\n" + "You guessed wrong " + (1/guesscount)*10 + " percent of the time.";
 
 		return output;
 	}

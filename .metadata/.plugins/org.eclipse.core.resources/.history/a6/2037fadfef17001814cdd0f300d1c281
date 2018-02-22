@@ -20,7 +20,7 @@ public class Lab10e
 		int number = keyboard.nextInt();
 		test.Guessing(number);
 		test.playGame();
-		System.out.println(test);
+
 
 
 	}
