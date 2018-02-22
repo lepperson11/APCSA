@@ -31,7 +31,7 @@ public class GuessingGame
 			System.out.println("Pick a number between 1 and " + upperbound);
 			guess = keyboard.nextInt();
 			guesscount++;
-		} 
+		}
 
 
 
