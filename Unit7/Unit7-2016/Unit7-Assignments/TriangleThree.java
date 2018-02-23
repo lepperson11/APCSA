@@ -8,19 +8,13 @@ import static java.lang.System.*;
 
 public class TriangleThree
 {
-   private int size;
+   private int size, size2, size3;
    private String letter;
-
-	public TriangleThree()
-	{
-	}
-
-	public TriangleThree(int count, String let)
-	{
-	}
 
 	public void setTriangle( String let, int sz )
 	{
+		letter = let;
+		size = sz;
 	}
 
 	public String getLetter()
@@ -30,7 +24,23 @@ public class TriangleThree
 
 	public String toString()
 	{
-		String output="";
-		return output+"\n";
+		size2 = 0;
+		String output = "";
+		size3 = size;
+		while (size >= 1)
+		{
+			size2++;
+			output = output + " ";
+			for (size3 = 1; size3 <= size2; size3 = size3 + 1)
+			{
+				
+				output = output + letter;
+				
+			}
+			output = output + "\n";
+			size3 = size3 - 2;
+			size = size - 1;
+		}
+		return output;
 	}
 }
