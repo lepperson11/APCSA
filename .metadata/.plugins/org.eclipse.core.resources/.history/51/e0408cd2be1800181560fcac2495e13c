@@ -10,6 +10,17 @@ public class Triples
 {
    private int number;
 
+	public Triples()
+	{
+		this(0);
+	}
+
+	public Triples(int num)
+	{
+
+
+	}
+
 	public void setNum(int num)
 	{
 
@@ -28,6 +39,11 @@ public class Triples
 	public String toString()
 	{
 		String output="";
+
+
+
+
+
 
 		return output+"\n";
 	}
