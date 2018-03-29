@@ -16,30 +16,21 @@ public class TriangleThree
 		letter = let;
 		size = sz;
 	}
-
-	public String getLetter()
-	{
-		return "#";
-	}
-
 	public String toString()
 	{
-		size2 = 0;
+		size2 = size;
 		String output = "";
 		size3 = size;
-		while (size >= 1)
+		while (size2 != 0)
 		{
-			size2++;
-			output = output + " ";
-			for (size3 = 1; size3 <= size2; size3 = size3 + 1)
+			for (size3 = size2; size3 <= size; size3 = size3 + 1)
 			{
 				
 				output = output + letter;
 				
 			}
 			output = output + "\n";
-			size3 = size3 - 2;
-			size = size - 1;
+			size2--;
 		}
 		return output;
 	}
