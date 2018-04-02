@@ -1,5 +1,0 @@
-public class ElevensBoard{
-	public void Print(){
-		System.out.println("Luke Epperson, Period 1, 3/23/2018, Computer Number 13");
-	}
-}
