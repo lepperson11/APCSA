@@ -1,57 +1,29 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
-
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.Canvas;
-import java.awt.event.ActionEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
 import static java.lang.Character.*;
-import java.awt.image.BufferedImage;
-import java.awt.event.ActionListener;
 
 public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
 {
 	private Ball ball;
 	private Paddle leftPaddle;
-	private boolean[] keys;		//keeps track of what keys are pressed
-
+	private Paddle rightPaddle;
+	private boolean[] keys;
+	
 	public PaddleTestTwo()
 	{
-		//set up all game variables
-
-
-		//instantiate a Ball
-		
-		
-		
-		//instantiate a left Paddle
-		
-		
-		
-		
-		//instantiate a right Paddle
-		
-		
-		
-
-
+		ball = new Ball();
+		leftPaddle = new Paddle(50,100,20,50,Color.blue,5);
+		rightPaddle = new Paddle(750,100,20,50,Color.green,5);
 		keys = new boolean[5];
-
-
-		//set up the Canvas
 		setBackground(Color.WHITE);
 		setVisible(true);
-
 		this.addKeyListener(this);
 		new Thread(this).start();
 	}
-	
+
 	public void update(Graphics window)
 	{
 		paint(window);
@@ -61,35 +33,30 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
 	{
 		ball.moveAndDraw(window);
 		leftPaddle.draw(window);
-
+		rightPaddle.draw(window);
 		if(!(ball.getX()>=10 && ball.getX()<=550))
 		{
 			ball.setXSpeed(-ball.getXSpeed());
 		}
-
 		if(!(ball.getY()>=10 && ball.getY()<=450))
 		{
 			ball.setYSpeed(-ball.getYSpeed());
 		}
-
 		if(keys[0] == true)
 		{
-			//move left paddle up and draw it on the window
 			leftPaddle.moveUpAndDraw(window);
 		}
 		if(keys[1] == true)
 		{
-			//move left paddle down and draw it on the window
-
-
+			leftPaddle.moveDownAndDraw(window);
 		}
 		if(keys[2] == true)
 		{
-
+			rightPaddle.moveUpAndDraw(window);
 		}
 		if(keys[3] == true)
 		{
-
+			rightPaddle.moveDownAndDraw(window);
 		}
 	}
 
@@ -119,18 +86,19 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
 	{
 		//no code needed here
 	}
-	
-   public void run()
-   {
-   	try
-   	{
-   		while(true)
-   		{
-   		   Thread.currentThread().sleep(8);
-            repaint();
-         }
-      }catch(Exception e)
-      {
-      }
-  	}		
+
+  public void run()
+  {
+  	try
+  	{
+  		while(true)
+  		{
+  		   Thread.currentThread().sleep(8);
+           repaint();
+        }
+     }catch(Exception e)
+     {
+     }
+ 	}		
 }
+
