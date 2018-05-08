@@ -97,6 +97,15 @@ public class PictureTester
 	  picture.mirrorDiagonal();
 	  picture.explore();
  }
+ public static void testBlur(int x, int y, int w, int h, int n)
+ {
+    Picture redMoto = new Picture(getSimplePathFromLead("beach.jpg"));
+    for (int i = 0; i<n; i++){
+       redMoto.blur(x,y,w,h);
+     }
+     redMoto.explore();
+ }
+
 
  /** Main method for testing.  Every class can have a main
    * method in Java */
@@ -105,6 +114,7 @@ public class PictureTester
    // uncomment a call here to run a test
    // and comment out the ones you don't want
    // to run
+	 testBlur(190,160,20,20,5);
    // testZeroBlue();
    //testKeepOnlyBlue();
    //testKeepOnlyRed();

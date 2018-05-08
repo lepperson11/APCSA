@@ -247,6 +247,19 @@ public class Picture extends SimplePicture
      }
    }
  }
+ public void blur(int x, int y, int w, int h)
+ {
+   Pixel[][] pixels = this.getPixels2D();
+   for (Pixel[] rowArray : pixels)
+   {
+     for (Pixel pixelObj : rowArray)
+     {
+    	 pixelObj.setRed(pixelObj.getRed() / 3 * 2);
+         pixelObj.setGreen(pixelObj.getGreen() / 3 * 2);
+         pixelObj.setBlue(pixelObj.getBlue() / 3 * 2);
+     }
+   }
+ }
  public void setRed()
  {
    Pixel[][] pixels = this.getPixels2D();
