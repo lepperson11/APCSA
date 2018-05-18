@@ -207,9 +207,60 @@ public class Picture extends SimplePicture
    this.write("collage.jpg");
  }
 
+ public void encode(Picture messagePict)
+ {
 
+ Pixel[][] messagePixels = messagePict.getPixels2D();
+ Pixel[][] currPixels = this.getPixels2D();
+ Pixel currPixel = null;
+ Pixel messagePixel = null;
+ int count = 0;
+ for (int row = 0; row < this.getHeight(); row++)
+ {
+ for (int col = 0; col < this.getWidth(); col++)
+ {
+ // if the current pixel red is odd make it even
+ currPixel = currPixels[row][col];
+ if (currPixel.getRed() % 2 == 1)
+ currPixel.setRed(currPixel.getRed() - 1);
+ messagePixel = messagePixels[row][col];
+ if (messagePixel.colorDistance(Color.BLACK) < 50)
+ {
+ currPixel.setRed(currPixel.getRed() + 1);
+ count++;
+ }
+ }
+ }
+ System.out.println(count);
+ }
 
+ public Picture decode()
+ {
+ Pixel[][] pixels = this.getPixels2D();
+ int height = this.getHeight();
+ int width = this.getWidth();
+ Pixel currPixel = null;
 
+ Pixel messagePixel = null;
+ Picture messagePicture = new Picture(height,width);
+ Pixel[][] messagePixels = messagePicture.getPixels2D();
+ int count = 0;
+ for (int row = 0; row < this.getHeight(); row++)
+ {
+ for (int col = 0; col < this.getWidth(); col++)++++++++++++
+ {
+ currPixel = pixels[row][col];
+ messagePixel = messagePixels[row][col];
+ if (currPixel.getRed() % 2 == 1)
+ {
+ messagePixel.setColor(Color.BLACK);
+ count++;
+ }
+ }
+ }
+ System.out.println(count);
+ return messagePicture;
+ }
  /** Method to show large changes in color
    * @param edgeDist the distance for finding edges
    */

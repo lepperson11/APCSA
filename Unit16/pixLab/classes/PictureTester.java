@@ -97,6 +97,11 @@ public class PictureTester
 	  picture.mirrorDiagonal();
 	  picture.explore();
  }
+ public static void testencode() {
+	  Picture picture = new Picture(getSimplePathFromLead("beach.jpg"));
+	  picture.encode();
+	  picture.explore();
+}
  public static void testBlur(int x, int y, int w, int h, int n)
  {
     Picture redMoto = new Picture(getSimplePathFromLead("beach.jpg"));
@@ -114,7 +119,7 @@ public class PictureTester
    // uncomment a call here to run a test
    // and comment out the ones you don't want
    // to run
-	 testBlur(190,160,20,20,5);
+   //testBlur(190,160,20,20,5);
    // testZeroBlue();
    //testKeepOnlyBlue();
    //testKeepOnlyRed();
@@ -131,6 +136,8 @@ public class PictureTester
    //testMirrorGull();
    //testMirrorDiagonal();
    //testCollage();
+   testencode();
+
    //testCopy();
    //testEdgeDetection();
    //testEdgeDetection2();
