@@ -1,16 +1,7 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
-
 import java.awt.Color;
-
 import java.awt.Graphics;
 
 public class Block implements Locatable
-
-
 {
 	private int xPos;
 	private int yPos;
@@ -20,7 +11,9 @@ public class Block implements Locatable
 	private final int DEFAULT_Y = 150;
 	private final int DEFAULT_DIM = 10;
 	private final Color DEFAULT_COLOR = Color.black;
+
 	private Color color;
+
 	public Block()
 	{
 		setPos(DEFAULT_X,DEFAULT_Y);
@@ -45,6 +38,7 @@ public class Block implements Locatable
 		setDim(w,h);
 		setColor(c);
 	}
+
 	public void setX(int x)
 	{
 		xPos = x;
@@ -75,6 +69,7 @@ public class Block implements Locatable
 	{
 		color = c;
 	}
+
 	public void draw(Graphics window)
 	{
 		window.setColor(color);
@@ -85,6 +80,7 @@ public class Block implements Locatable
 		window.setColor(c);
 		window.fillRect(getX(), getY(), getWidth(), getHeight());
 	}
+
 	public int getX()
 	{
 		return xPos;
@@ -105,28 +101,29 @@ public class Block implements Locatable
 	{
 		return color;
 	}
+
 	public boolean equals(Object obj)
 	{
-		Block cp = (Block)obj;
-		if (getX() != cp.getX()) return false;
-		if (getY() != cp.getY()) return false;
-		if (getWidth() != cp.getWidth()) return false;
-		if (getHeight() != cp.getHeight()) return false;
-		if (getColor() != cp.getColor()) return false;
+		Block comp = (Block)obj;
+		if (getX() != comp.getX()) return false;
+		if (getY() != comp.getY()) return false;
+		if (getWidth() != comp.getWidth()) return false;
+		if (getHeight() != comp.getHeight()) return false;
+		if (getColor() != comp.getColor()) return false;
 		return true;
 	}
 	public String toString()
 	{
-		String word = "";
-		word += getX();
-		word += " ";
-		word += getY();
-		word += " ";
-		word += getWidth();
-		word += " ";
-		word += getHeight();
-		word += " ";
-		word += getColor();
-		return word;
+		String ret = "";
+		ret += getX();
+		ret += " ";
+		ret += getY();
+		ret += " ";
+		ret += getWidth();
+		ret += " ";
+		ret += getHeight();
+		ret += " ";
+		ret += getColor();
+		return ret;
 	}
 }
